@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F04DF2A-9512-41A4-B981-2B86A31E4E45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Celeste.Mod.GhostKevinball.Net</RootNamespace>
+    <AssemblyName>GhostNetMod_Kevin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Celeste">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib-stripped\Celeste.exe</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Celeste.Mod.mm">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\Celeste.Mod.mm\bin\Debug\Celeste.Mod.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="FNA">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib-stripped\FNA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MMHOOK_Celeste">
+      <HintPath>..\MMHOOK_Celeste.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Open.Nat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f22a6a4582336c76, processorArchitecture=MSIL">
+      <HintPath>..\packages\Open.NAT.2.1.0.0\lib\net45\Open.Nat.dll</HintPath>
+    </Reference>
+    <Reference Include="Steamworks.NET">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib-stripped\Steamworks.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib\YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chunks\ChunkEAudioTrackState.cs" />
+    <Compile Include="Chunks\ChunkEAudioState.cs" />
+    <Compile Include="Chunks\ChunkMKevinballEnd.cs" />
+    <Compile Include="Chunks\ChunkMKevinballShuffle.cs" />
+    <Compile Include="Chunks\ChunkMKevinballStart.cs" />
+    <Compile Include="Chunks\ChunkRListAreas.cs" />
+    <Compile Include="Chunks\ChunkRListMods.cs" />
+    <Compile Include="Chunks\ChunkUAudioPlay.cs" />
+    <Compile Include="Chunks\ChunkUControlPress.cs" />
+    <Compile Include="Chunks\ChunkUCrushHit.cs" />
+    <Compile Include="Chunks\ChunkUKevinballWin.cs" />
+    <Compile Include="Chunks\ChunkULoadedKevinball.cs" />
+    <Compile Include="Chunks\ChunkUParticles.cs" />
+    <Compile Include="Chunks\ChunkUActionCollision.cs" />
+    <Compile Include="Chunks\ChunkUPickupKevinRefill.cs" />
+    <Compile Include="Chunks\ChunkUPlayerDeath.cs" />
+    <Compile Include="Chunks\ChunkUSpikeTrigger.cs" />
+    <Compile Include="Chunks\ChunkUTouchPress.cs" />
+    <Compile Include="Chunks\IChunk.cs" />
+    <Compile Include="Chunks\ChunkHHead.cs" />
+    <Compile Include="Chunks\ChunkMChat.cs" />
+    <Compile Include="Chunks\ChunkMEmote.cs" />
+    <Compile Include="Chunks\ChunkMRequest.cs" />
+    <Compile Include="Chunks\ChunkMSession.cs" />
+    <Compile Include="Chunks\ChunkMServerInfo.cs" />
+    <Compile Include="Chunks\ChunkUUpdate.cs" />
+    <Compile Include="Chunks\ChunkMPlayer.cs" />
+    <Compile Include="Connection\GhostNetRemoteConnection.cs" />
+    <Compile Include="Connection\GhostNetLocalConnection.cs" />
+    <Compile Include="ControlSwitch.cs" />
+    <Compile Include="GhostNetHooks.cs" />
+    <Compile Include="GhostNetExtensions.cs" />
+    <Compile Include="GhostNetParticleHelper.cs" />
+    <Compile Include="GhostNetRaceManager.cs" />
+    <Compile Include="GhostNetCommandsStandard.cs" />
+    <Compile Include="GhostNetCommand.cs" />
+    <Compile Include="GhostNetEmoteWheel.cs" />
+    <Compile Include="GhostNetEmote.cs" />
+    <Compile Include="GhostNetFrame.cs" />
+    <Compile Include="Connection\GhostNetConnection.cs" />
+    <Compile Include="GhostNetClient.cs" />
+    <Compile Include="GhostNetServer.cs" />
+    <Compile Include="GhostNetModuleSettings.cs" />
+    <Compile Include="GhostNetModule.cs" />
+    <Compile Include="GhostNetTouchSwitch.cs" />
+    <Compile Include="KevinballEndzoneTrigger.cs" />
+    <Compile Include="KevinballP1SpawnTrigger.cs" />
+    <Compile Include="KevinballP2SpawnTrigger.cs" />
+    <Compile Include="KevinRefill.cs" />
+    <Compile Include="MultiplayerControlSwitch.cs" />
+    <Compile Include="MultiplayerDeathTrigger.cs" />
+    <Compile Include="MultiplayerTriggerSpikes.cs" />
+    <Compile Include="MultiplayerVariableSpeedCrushBlock.cs" />
+    <Compile Include="OuiModOptionStringFixed.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimedSwitch.cs" />
+    <Compile Include="TimedSwitchGate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GhostMod\GhostMod_Kevin.csproj">
+      <Project>{4abf8c07-c533-407e-9ec9-534c2916c907}</Project>
+      <Name>GhostMod_Kevin</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Dialog\English.txt">
+      <LogicalName>Content\Dialog\English.txt</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\ghostnetmod\iconwheel\bg.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\ghostnetmod\iconwheel\bg.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\ghostnetmod\iconwheel\line.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\ghostnetmod\iconwheel\line.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\ghostnetmod\iconwheel\indicator.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\ghostnetmod\iconwheel\indicator.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\everest.yaml">
+      <Link>everest.yaml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="NATUPNPLib">
+      <Guid>{1C565858-F302-471E-B409-F180AA4ABEC6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

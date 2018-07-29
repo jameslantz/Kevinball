@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4ABF8C07-C533-407E-9EC9-534C2916C907}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Celeste.Mod.GhostKevinball</RootNamespace>
+    <AssemblyName>GhostMod_Kevin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OutputPath Condition=" '$(TravisCore)' == 'true' ">Artifact\</OutputPath>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath Condition=" '$(TravisCore)' == '' ">bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath Condition=" '$(TravisCore)' == '' ">bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType Condition=" '$(TravisCore)' == '' ">pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Celeste">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib-stripped\Celeste.exe</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Celeste.Mod.mm">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\Celeste.Mod.mm\bin\Debug\Celeste.Mod.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="FNA">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib-stripped\FNA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MMHOOK_Celeste">
+      <HintPath>..\MMHOOK_Celeste.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Steamworks.NET">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib-stripped\Steamworks.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Projects\celeste_mod_2\Everest\lib\YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GhostChunkInput.cs" />
+    <Compile Include="GhostChunkData.cs" />
+    <Compile Include="GhostManager.cs" />
+    <Compile Include="GhostExtensions.cs" />
+    <Compile Include="GhostName.cs" />
+    <Compile Include="GhostInputReplayer.cs" />
+    <Compile Include="GhostRecorder.cs" />
+    <Compile Include="GhostData.cs" />
+    <Compile Include="Ghost.cs" />
+    <Compile Include="GhostFrame.cs" />
+    <Compile Include="GhostModuleSettings.cs" />
+    <Compile Include="GhostModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GhostInputNodes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Dialog\English.txt">
+      <LogicalName>Content\Dialog\English.txt</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\everest.yaml">
+      <Link>everest.yaml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

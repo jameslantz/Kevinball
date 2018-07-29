@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhostMod_Kevin", "GhostMod\GhostMod_Kevin.csproj", "{4ABF8C07-C533-407E-9EC9-534C2916C907}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhostNetMod_Kevin", "GhostNetMod\GhostNetMod_Kevin.csproj", "{2F04DF2A-9512-41A4-B981-2B86A31E4E45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ABF8C07-C533-407E-9EC9-534C2916C907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABF8C07-C533-407E-9EC9-534C2916C907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABF8C07-C533-407E-9EC9-534C2916C907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABF8C07-C533-407E-9EC9-534C2916C907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F04DF2A-9512-41A4-B981-2B86A31E4E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F04DF2A-9512-41A4-B981-2B86A31E4E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F04DF2A-9512-41A4-B981-2B86A31E4E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F04DF2A-9512-41A4-B981-2B86A31E4E45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {644F107C-9A83-45E7-8F32-318ECBB4817D}
+	EndGlobalSection
+EndGlobal
